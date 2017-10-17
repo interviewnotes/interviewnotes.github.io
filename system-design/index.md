@@ -1,7 +1,7 @@
 ### Concepts
-a. [Distributed Systems](distributed-systems.md)
-b. [Big Data](big-data.md)
-c. [Mobile](mobile.md)
+1. [Distributed Systems](distributed-systems.md)
+2. [Big Data](big-data.md)
+3. [Mobile](mobile.md)
 
 ### Problems
 1. [ID Generator](id-generator.md)
