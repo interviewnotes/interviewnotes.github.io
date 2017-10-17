@@ -1,3 +1,3 @@
 Questions
 
-1. ID Generator
+1. [ID Generator](id-generator.md)
