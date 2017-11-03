@@ -12,4 +12,4 @@ Design a service that takes in a long url and returns a short url, and vice-vers
 
 
 #### References
-https://www.youtube.com/watch?v=fMZMm_0ZhK4
+[https://www.youtube.com/watch?v=fMZMm_0ZhK4](https://www.youtube.com/watch?v=fMZMm_0ZhK4)
