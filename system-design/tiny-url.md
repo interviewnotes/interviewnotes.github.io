@@ -3,6 +3,7 @@ Design a service that takes in a long url and returns a short url, and vice-vers
 
 #### API
 `String createTinyUrl(String longUrl);`
+
 `String getLongUrl(String tinyUrl);`
 
 #### Application Layer
