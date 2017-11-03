@@ -35,3 +35,5 @@ the total number of unique combinations is 62 ^ 7 ~= 3.5 trillion
 
 #### References
 [https://www.youtube.com/watch?v=fMZMm_0ZhK4](https://www.youtube.com/watch?v=fMZMm_0ZhK4)
+
+[Bitly Architecture](http://highscalability.com/blog/2014/7/14/bitly-lessons-learned-building-a-distributed-system-that-han.html)
