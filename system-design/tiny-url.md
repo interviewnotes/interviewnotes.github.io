@@ -9,9 +9,10 @@ Design a service that takes in a long url and returns a tiny url, and vice-versa
 * Is the tiny url case-sensitive?
 
 #### API
-** String getTinyUrl(String longUrl);
-
-** String getLongUrl(String tinyUrl);
+```java
+String getTinyUrl(String longUrl);
+String getLongUrl(String tinyUrl);
+```
 
 #### Architecture
 * Consumer sends a getTinyURL request, say based on REST, to the webapp
@@ -23,9 +24,10 @@ Design a service that takes in a long url and returns a tiny url, and vice-versa
 
 #### Calculations
 * Assuming, tinyUrl
-- is 7 characters long
-- is case-insensitive
-- can have 62 characters (a to z, A to Z, 0 to 9)
+  * is 7 characters long 
+  * is case-insensitive
+  * can have 62 characters (a to z, A to Z, 0 to 9),
+  
 the total number of unique combinations is 62 ^ 7 ~= 3.5 trillion
 
 * If the service handles 1K requests per second, it will take 110 years to exhaust 3.5 trillion
