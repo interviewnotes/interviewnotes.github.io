@@ -36,7 +36,7 @@ String getLongUrl(String tinyUrl);
 * number of bits required to represent 3.5 trillion = 42 (2 ^ 42 ~= 4.2 trillion) 
 
 ### Techniques to generate tinyURL
-#### Random generation
+#### Random
 1. on every request, generate a random string of 7 characters.
 2. check if the generated string exits in the database.
 3. if does not exist, use the generated string as the tinyURL. Otherwise, repeat the process.
@@ -45,10 +45,10 @@ Cons:
   * may not work if multiple services perform step 3 with the same random string.
   
 #### Hashing
-1. Hash the longUrl using a hashing function, such as MD5 (which produces 128-bit hash), from the hash value, get first 42 bits
-2. Follow step 2 and 3 from the Random generation approach
+1. Hash the longUrl using a hashing function, such as MD5 (which produces 128-bit hash). From the hash value, get first 42 bits
+2. Follow step 2 and 3 from the Random approach
 
-Pros: compared to Random generation approach, this will return the same value for the same longUrl
+Pros: compared to Random  approach, this will return the same value for the same longUrl
 Cons: same as 1st
 
 
