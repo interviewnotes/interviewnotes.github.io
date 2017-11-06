@@ -3,7 +3,7 @@
 #### Problem Statement
 Design a service that takes in a long url and returns a tiny url, and vice-versa.
 
-#### Questions to ponder
+#### Discuss
 * How wide is the long url? Say 100s characters
 * How wide is the tiny url? Say 7 to 10 characters
 * Is the tiny url case-sensitive?
@@ -14,11 +14,11 @@ Design a service that takes in a long url and returns a tiny url, and vice-versa
 ** String getLongUrl(String tinyUrl);
 
 #### Architecture
-* Consumer sends a request, getTinyUrl (say based on REST), to the webapp
+* Consumer sends a getTinyURL request, say based on REST, to the webapp
 * Request is forwarded to a load balancer
-* Load Balancer forwards the request to one of the worker services
-* Worker service generates the tinyUrl and persists it in the database
-* The generated tinyUrl is cached (common to all worker services)
+* Load Balancer forwards the request to one of the tinyURL services
+* tinyURL service generates the tinyURL and persists it in the database
+* The generated tinyUrl is cached (centralized to all tinyURL services)
 * The generated tinyUrl is returned to the consumer
 
 #### Calculations
