@@ -1,2 +1,5 @@
-* Problem Solving
-  * [Anagrams](anagrams.md) (Map, Linked List)
+### Problem Solving
+1. [Anagrams](anagrams.md) (Map, List)
+
+
+
