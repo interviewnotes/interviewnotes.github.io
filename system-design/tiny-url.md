@@ -32,14 +32,12 @@ GET https://host/get-long-url?tiny-url=<val>
   * If the service handles 1M requests per second, it will take 40 days to exhaust 3.5 trillion
 * number of bits required to represent 3.5 trillion = 42 (2 ^ 42 ~= 4.2 trillion) 
 
-### Techniques to generate tinyURL
+### Techniques to generate tiny-url
 #### Random
 1. on every request, generate a random number. Encode the number to a 7 character string.
 2. check if the generated string exsits in the database.
-3. if does not exist, use the generated string as the tinyURL. Otherwise, repeat the process.
-
-Cons: 
-  * may not work if multiple services perform step 3 with the same random string.
+3. if does not exist, use the generated string as the tiny-url. Otherwise, repeat the process.
+* may not work if multiple services perform step 3 with the same random string.
   
 #### Hashing
 1. Hash the longUrl using a hashing function, such as MD5 (which produces 128-bit hash). From the hash value, get first 42 bits. The numeric value from the first 42 bits can be encoded to a 7 character string. 
