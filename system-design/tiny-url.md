@@ -46,26 +46,26 @@ GET https://host/get-long-url?tiny-url=<val>
 
 > compared to Random  approach, this will return the same value for the same long-url.
 
-> same issues as 1st
+> same issues as Random approach
 
 #### Counter
 Generate a number from a sequence and encode it to a 7 character string.
 
 1. Single host: A single host can keep a counter that can be atomically incremented. This host can be a database or a ZooKeeper node.
 
-    > host is a single point of failure.
+> host is a single point of failure.
     
-    > can become a bottleneck if there are too many total requests.
+> can become a bottleneck if there are too many total requests.
   
 2. Distributed counter: Multiple hosts can have its own counter. The pattern of numbers can be unique to each host. Say, we have 64 hosts - the first 6 bits of the number can represent the host id, next 32-bits can be the counter, final 4 bits can be random.
 
-   > adding/removing hosts is complex.
+> adding/removing hosts is complex.
    
-   > with only 4 random bits, the chances of collision within the same host is high. Increasing this size can help.
+> with only 4 random bits, the chances of collision within the same host is high. Increasing this size can help.
   
 3. Range-based counter: Maintain ranges of numbers in a highly available service, such as a ZooKeeper node. Ranges can be 0-1000000, 1000001-2000000, etc. For a billion numbers, there will be 1K ranges. A tiny-url service will check-out a range from the node. The service will use that range as its counter range. Any new tiny-url service will check-out the next available range. 
 
-   > additional dependency on ZooKeeper like service.
+> additional dependency on ZooKeeper like service.
   
 
 > the output is predictable. Add some random bits to provide some obfuscation.
