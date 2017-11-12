@@ -36,11 +36,13 @@ GET https://host/get-long-url?tiny-url=<val>
 1. on every request, generate a random number. Encode the number to a 7 character string.
 2. check if the generated string exsits in the database.
 3. if does not exist, use the generated string as the tiny-url. Otherwise, repeat the process.
+
 * may not work if multiple services perform step 3 with the same random string.
   
 #### Hashing
 1. Hash the long-url using a hashing function, such as MD5 (which produces 128-bit hash). From the hash value, get first 42 bits. The numeric value from the first 42 bits can be encoded to a 7 character string. 
 2. Follow step 2 and 3 from the Random approach
+
 * compared to Random  approach, this will return the same value for the same long-url.
 * same issues as Random approach
 
@@ -48,6 +50,7 @@ GET https://host/get-long-url?tiny-url=<val>
 Generate a number from a sequence and encode it to a 7 character string.
 
 Single host: A single host can keep a counter that can be atomically incremented. This host can be a database or a ZooKeeper node.
+
 * host is a single point of failure.
 * can become a bottleneck if there are too many total requests.
   
@@ -59,6 +62,7 @@ Distributed counter: Multiple hosts can have its own counter. The pattern of num
 Range-based counter: Maintain ranges of numbers in a highly available service, such as a ZooKeeper node. Ranges can be 0-1000000, 1000001-2000000, etc. For a billion numbers, there will be 1K ranges. A tiny-url service will check-out a range from the node. The service will use that range as its counter range. Any new tiny-url service will check-out the next available range. 
 * additional dependency on ZooKeeper like service.
   
+
 * the output is predictable. Add some random bits to provide some obfuscation.
 
 #### References
