@@ -20,6 +20,7 @@ Sort the 2 strings and compare. Example:
 
 
 > time: O(n log n) - n is the maximum length of the 2 strings.
+
 > space: O(n) - if the string can't be sorted in-place (such as in Java), otherwise O(1)
 
 #### Using Map
@@ -33,6 +34,7 @@ Sort the 2 strings and compare. Example:
 
 
 > time: O(n) - n is the maximum length of the 2 strings.
+
 > space: O(n)
 
 #### Tip
@@ -57,4 +59,5 @@ public List<List<String> groupAnagrams(List<String>);
 * Since the value in the map is a `List<String>`, the words are ordered in the order they appear in the input.
 
 > time: O(n) - n is the number of input words
+
 > space: O(n)
