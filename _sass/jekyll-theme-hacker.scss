@@ -131,9 +131,13 @@ dt {
   font-weight: bold;
 }
 
+li {
+  padding-left: 2px;
+}
+
 blockquote {
   color: #aaa;
-  padding-left: 0px;
+  padding-left: 10px;
   border-left: 1px dotted #666;
 }
 
