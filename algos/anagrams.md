@@ -50,7 +50,7 @@ Example:
 
 ### API
 ```java
-public List<List<String> groupAnagrams(List<String>);
+public Map<String, List<String> groupAnagrams(List<String>);
 ```
 
 ### Approach
