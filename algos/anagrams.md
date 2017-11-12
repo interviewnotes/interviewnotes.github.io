@@ -39,6 +39,8 @@ public boolean areAnagrams(String a, String b);
 #### Tip
 * Prepare a customized example for your interviewer. For example, "apple siri" and "spiral pie" are anagrams. Find anagrams at (https://wordsmith.org/anagram/)[https://wordsmith.org/anagram/]
 
+---
+
 ## Level 2
 Given a list of strings, group anagrams. The order of words within the groups should be same as in the input.
 Example: 
