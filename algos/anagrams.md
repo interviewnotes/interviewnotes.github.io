@@ -4,7 +4,7 @@ Two strings are anagrams if they have the same count of every character.
 Example: "siri" and "iris" are anagrams, "whether" and "weather" are not (they are homophones).
 
 ## Level 1
-Given two strings, check whether they are anagrams.
+Check whether 2 strings are anagrams.
 
 ### API
 ```java
