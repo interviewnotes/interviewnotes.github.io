@@ -15,9 +15,10 @@ public boolean areAnagrams(String a, String b);
   * "siri" sorts to "iirs"
   * "iris" sorts to "iirs"
   * the sorted strings are equal.
-> :alarm_clock: O(n log n) - n is the maximum length of the 2 strings.
 
-> :floppy_disk: O(n) - if the string can't be sorted in-place (such as in Java), otherwise O(1)
+> time: O(n log n) - n is the maximum length of the 2 strings.
+
+> space: O(n) - if the string can't be sorted in-place (such as in Java), otherwise O(1)
 
 #### Using Map
 1. Create a `map` of character and its count.
@@ -27,9 +28,10 @@ public boolean areAnagrams(String a, String b);
   * decrement count for that character. 
   * if count is 0, then remove the character from `map`
 4. If `map` is empty, then the strings are anagrams.
-> :alarm_clock: O(n) - n is the maximum length of the 2 strings.
 
-> :floppy_disk: O(n)
+> time: O(n) - n is the maximum length of the 2 strings.
+
+> space: O(n)
 
 #### Tip
 * Prepare a customized example for your interviewer. For example, "apple siri" and "spiral pie" are anagrams. Find anagrams at https://wordsmith.org/anagram/
