@@ -1,6 +1,5 @@
 ## Tiny URL
 
-### Problem Statement
 Design a service that takes in a long url and returns a tiny url, and vice-versa.
 
 ### Discuss
