@@ -37,11 +37,10 @@ GET https://host/get-long-url?tiny-url=<val>
 1. on every request, generate a random number. Encode the number to a 7 character string.
 2. check if the generated string exsits in the database.
 3. if does not exist, use the generated string as the tiny-url. Otherwise, repeat the process.
-
 > may not work if multiple services perform step 3 with the same random string.
   
 #### Hashing
-1. Hash the longUrl using a hashing function, such as MD5 (which produces 128-bit hash). From the hash value, get first 42 bits. The numeric value from the first 42 bits can be encoded to a 7 character string. 
+1. Hash the long-url using a hashing function, such as MD5 (which produces 128-bit hash). From the hash value, get first 42 bits. The numeric value from the first 42 bits can be encoded to a 7 character string. 
 2. Follow step 2 and 3 from the Random approach
 
 > compared to Random  approach, this will return the same value for the same long-url.
