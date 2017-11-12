@@ -13,11 +13,11 @@ public boolean areAnagrams(String a, String b);
 
 ### Approaches
 #### Sorting
-* Sort the 2 strings and compare.
-* Example:
+Sort the 2 strings and compare. Example:
   * "siri" sorts to "iirs"
   * "iris" sorts to "iirs"
   * the sorted strings are equal.
+
 
 > time: O(n log n) - n is the maximum length of the 2 strings.
 
@@ -31,6 +31,7 @@ public boolean areAnagrams(String a, String b);
   * decrement count for that character. 
   * if count is 0, then remove the character from `map`
 4. If `map` is empty, then the strings are anagrams.
+
 
 > time: O(n) - n is the maximum length of the 2 strings.
 
