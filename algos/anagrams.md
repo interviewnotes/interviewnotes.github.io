@@ -17,10 +17,11 @@ Sort the 2 strings and compare. Example:
   * "siri" sorts to "iirs"
   * "iris" sorts to "iirs"
   * the sorted strings are equal.
-```
-* time: O(n log n) - n is the maximum length of the 2 strings.
-* space: O(n) - if the string can't be sorted in-place (such as in Java), otherwise O(1)
-```
+
+
+> time: O(n log n) - n is the maximum length of the 2 strings.
+
+> space: O(n) - if the string can't be sorted in-place (such as in Java), otherwise O(1)
 
 #### Using Map
 1. Create a `map` of character and its count.
