@@ -3,13 +3,10 @@
 Design a service that takes in a long url and returns a tiny url, and vice-versa.
 
 ### Discuss
-How wide is the long url? Say 100s characters
-
-How wide is the tiny url? Say 7 to 10 characters
-
-Is the tiny url case-sensitive?
-
-Can the tiny url be sequential? Not so great to prevent hacking.
+* How wide is the long url? Say 100s characters
+* How wide is the tiny url? Say 7 to 10 characters
+* Is the tiny url case-sensitive?
+* Can the tiny url be sequential? Not so great to prevent hacking.
 
 ### API
 ```
@@ -17,29 +14,22 @@ GET https://host/get-tiny-url?long-url=<val>
 GET https://host/get-long-url?tiny-url=<val>
 ```
 ### Architecture
-Consumer sends a get-tiny-url request, say based on REST, to the service
-
-Request is forwarded to a load balancer
-
-Load balancer forwards the request to one of the tiny-url services
-
-tiny-url service generates the tiny-url and persists it in the database
-
-The generated tiny-url is cached (centralized to all tiny-url services)
-
-The generated tiny-url is returned to the consumer
+* Consumer sends a get-tiny-url request, say based on REST, to the service
+* Request is forwarded to a load balancer
+* Load balancer forwards the request to one of the tiny-url services
+* tiny-url service generates the tiny-url and persists it in the database
+* The generated tiny-url is cached (centralized to all tiny-url services)
+* The generated tiny-url is returned to the consumer
 
 ### Numbers
-Assuming, tiny-url
+* Assuming, tiny-url
   * is 7 characters long 
   * is case-insensitive
   * can have 62 characters (a to z, A to Z, 0 to 9),
-
-the total number of unique combinations is 62 ^ 7 ~= 3.5 trillion
-
-If the service handles 1K requests per second, it will take 110 years to exhaust 3.5 trillion. If the service handles 1M requests per second, it will take 40 days.
-
-Number of bits required to represent 3.5 trillion = 42 (2 ^ 42 ~= 4.2 trillion) 
+* the total number of unique combinations is 62 ^ 7 ~= 3.5 trillion
+  * If the service handles 1K requests per second, it will take 110 years to exhaust 3.5 trillion
+  * If the service handles 1M requests per second, it will take 40 days to exhaust 3.5 trillion
+* number of bits required to represent 3.5 trillion = 42 (2 ^ 42 ~= 4.2 trillion) 
 
 ### Techniques to generate tiny-url
 #### Random
