@@ -1,4 +1,4 @@
-[Algorithms](algos.md)
+[Algorithms](algos)
 
 
-[System Design](system-design.md)
+[System Design](system-design)
