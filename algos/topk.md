@@ -16,7 +16,6 @@ public List<String> topK(List<String>);
   > time: O(n) - n is the number of input strings
 
   > space: O(n)
-
 2. The `map` from the first step is not sorted. There are 2 approaches to extract the top K from the `map`:
 
 #### Using ArrayList
