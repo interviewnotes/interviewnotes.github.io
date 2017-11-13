@@ -3,10 +3,13 @@
 Design a service that takes in a long url and returns a tiny url, and vice-versa.
 
 ### Discuss
-* How wide is the long url? Say 100s characters
-* How wide is the tiny url? Say 7 to 10 characters
-* Is the tiny url case-sensitive?
-* Can the tiny url be sequential? Not so great to prevent hacking.
+How wide is the long url? Say 100s characters
+
+How wide is the tiny url? Say 7 to 10 characters
+
+Is the tiny url case-sensitive?
+
+Can the tiny url be sequential? Not so great to prevent hacking.
 
 ### API
 ```
