@@ -37,9 +37,7 @@ Assuming, tiny-url
 
 the total number of unique combinations is 62 ^ 7 ~= 3.5 trillion
 
-If the service handles 1K requests per second, it will take 110 years to exhaust 3.5 trillion
-
-If the service handles 1M requests per second, it will take 40 days to exhaust 3.5 trillion
+If the service handles 1K requests per second, it will take 110 years to exhaust 3.5 trillion. If the service handles 1M requests per second, it will take 40 days.
 
 Number of bits required to represent 3.5 trillion = 42 (2 ^ 42 ~= 4.2 trillion) 
 
