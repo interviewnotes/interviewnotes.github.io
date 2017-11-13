@@ -38,7 +38,7 @@ Sort the 2 strings and compare. Example:
 > space: O(n)
 
 #### Tip
-* Prepare a customized example for your interviewer. For example, "apple siri" and "spiral pie" are anagrams. Find anagrams at [https://wordsmith.org/anagram/](https://wordsmith.org/anagram/)
+Prepare a customized example for your interviewer. For example, "apple siri" and "spiral pie" are anagrams. Find anagrams at [https://wordsmith.org/anagram/](https://wordsmith.org/anagram/)
 
 ---
 
