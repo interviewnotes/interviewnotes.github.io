@@ -11,16 +11,18 @@ public List<String> topK(List<String>);
 ```
 
 ### Approach
-1. Create a `map` of type `Map<String, Integer>` - each entry is a string value mapped to its count.
+* Create a `map` of type `Map<String, Integer>` - each entry is a string value mapped to its count.
 
   > time: O(n) - n is the number of input strings
 
   > space: O(n)
-2. The `map` from the first step is not sorted. There are 2 approaches to extract the top K from the `map`:
+  
+* The `map` from the first step is not sorted. There are 2 approaches to extract the top K from the `map`:
 
 #### Using ArrayList
 1. Create an `ArrayList<Entry>` where `Entry` contains the string and its count.
 2. Sort the `ArrayList`. Return first K elements, and discard others.
+
 * If there are a million distinct strings, this approach will have allocate space and sort all of them.
   
 > time: O(d log d) - d is distinct number of input strings
